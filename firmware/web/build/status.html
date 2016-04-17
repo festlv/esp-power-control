@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Status</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.css" rel="stylesheet">
+    <script src="jquery.js"></script>
+
+    <style type="text/css">
+        div.status div.row {
+            margin-bottom: 1em;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<script>
+</script>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="/?auth={auth}">Status</a></li>
+                <li role="presentation"><a href="/settings?auth={auth}">Settings</a></li>
+                <li role="presentation"><a href="/networks?auth={auth}">Network</a></li>
+            </ul>
+        </nav>
+
+        <h3 class="text-muted">Power Control</h3>
+    </div>
+
+    <div class="row status">
+        <div class="col-lg-6 col-md-offset-3">
+        <h2>Status</h2>
+        {message} 
+        <div class="row">
+            <div class="col-md-4"><strong>Current status</strong></div>
+
+            <div class="col-md-6">
+                <strong>Activity:</strong> {activity}%<br/>
+                <strong>Power state:</strong> {power_state}<br/><br/>
+                <strong>Uptime:</strong> {uptime} <br/>
+                <form action="" method="post">
+                    <input type="submit" name="power_on" value="Power on / wake" class="btn btn-success"/><br/><br/>
+                    <input type="submit" name="power_off" value="Power off" class="btn btn-danger"/><br/><br/>
+                    <input type="submit" name="reset" value="Restart" class="btn btn-danger"/><br/>
+                </form><br/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"><strong>WiFi AP status</strong></div>
+            <div class="col-md-6">
+                <strong>SSID:</strong> {ap_ssid}<br/>
+                <strong>IP:</strong> {ap_ip}<br/>
+                <strong>Password:</strong> {ap_password}<br/>
+            
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"><strong>WiFi client status</strong></div>
+            <div class="col-md-6">
+                <strong>SSID:</strong> {client_ssid}<br/>
+                <strong>IP:</strong> {client_ip}<br>
+                <strong>Status:</strong> {client_status}<br>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4"><strong>Versions</strong></div>
+            <div class="col-md-6">
+                <strong>Software version:</strong> v{sw_ver}<br/>
+                <strong>Hardware version:</strong> rev{hw_ver}<br>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <!--<p>&copy; Company 2014</p>-->
+    </footer>
+
+</div> <!-- /container -->
+</body>
+<html>
