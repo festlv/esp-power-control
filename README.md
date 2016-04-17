@@ -25,7 +25,7 @@ done):
 
 http://192.168.4.1/?auth=authpasskey
 
-![Screenshot of web interface](img/screenshot-1.png?raw=true "Screenshot of web
+![Screenshot of web interface](img/screenshot-0.png?raw=true "Screenshot of web
 interface")
 
 Known limitations
