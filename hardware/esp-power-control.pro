@@ -1,4 +1,4 @@
-update=svētdiena, 2016. gada 17. aprīlis, plkst. 21 un 06
+update=Sun 17 Apr 2016 09:15:13 PM EEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -56,5 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-[general]
-version=1
+LibName30=kicad-ESP8266/ESP8266

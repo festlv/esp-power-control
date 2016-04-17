@@ -1,3 +1,5 @@
 firmware/out
 firmware/.ropeproject
+*.bak
+*-cache.lib
 
