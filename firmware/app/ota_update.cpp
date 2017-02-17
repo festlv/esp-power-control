@@ -6,7 +6,7 @@
 
 rBootHttpUpdate* otaUpdater = 0;
 
-void ota_update_callback(bool result) {
+void ota_update_callback(rBootHttpUpdate&, bool result) {
     if (result == true) {
         // success
         uint8 slot;
@@ -23,7 +23,7 @@ void ota_update_callback(bool result) {
 }
 
 void ota_update() {
-
+/*
     uint8 slot;
     rboot_config bootconf;
 
@@ -60,4 +60,5 @@ void ota_update() {
     debugf("Starting update\n");
     // start update
     otaUpdater->start();
+    */
 }

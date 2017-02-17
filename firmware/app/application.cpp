@@ -15,14 +15,9 @@ void init()
     Serial.begin(115200);
     Serial.systemDebugOutput(true);
     system_set_os_print(1);
+    
 
-	int slot = rboot_get_current_rom();
-
-	if (slot == 0) {
-		spiffs_mount_manual(RBOOT_SPIFFS_0 + 0x40200000, SPIFF_SIZE);
-	} else {
-		spiffs_mount_manual(RBOOT_SPIFFS_1 + 0x40200000, SPIFF_SIZE);
-	}
+    spiffs_mount();
 
 	AppSettings.load();
 
